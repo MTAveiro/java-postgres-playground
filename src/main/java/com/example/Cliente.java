@@ -1,9 +1,50 @@
 package com.example;
 
 public class Cliente{
-   private double renda;
-   private char sexo;
-   private int anoNascimento;
+    private String cpf;
+    private String nome;
+    private double renda;
+    private char sexo;
+    private int anoNascimento;
+    private boolean especial;
+
+    public Cliente(){
+            double aleatorio = Math.random();
+            if (aleatorio > 0.5) {
+                especial = true;
+            }
+    }
+
+   public Cliente(double renda, char sexo){
+        this();
+        setRenda(renda);
+        setSexo(sexo);
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome.toUpperCase().trim();
+    }
+
+   public boolean isEspecial() {
+    return especial;
+    }
+
+    public void setEspecial(boolean especial) {
+        this.especial = especial;
+    }
 
     public double getRenda() {
         return renda;
