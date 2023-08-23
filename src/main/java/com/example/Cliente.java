@@ -85,4 +85,8 @@ public class Cliente{
         }
         this.anoNascimento = anoNascimento;
     }
+
+    public String toString(){
+        return "Cliente " + nome;
+    }
 }
